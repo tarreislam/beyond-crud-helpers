@@ -1,0 +1,35 @@
+{
+    "name": "tarre/beyond-crud-helpers",
+    "license": "MIT",
+    "description": "Helper commands for \"Laravel Beyond Crud\"",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "nette/php-generator": "^3.6",
+        "laravel/framework": "*"
+    },
+    "suggest": {
+        "spatie/data-transfer-object": "The mmake:dto comman usesspaties dto package, not required, change config file to remove dependency",
+        "doctrine/dbal": "The mmake:model and mmake:dto can read your database and fill the blanks"
+    },
+    "authors": [
+        {
+            "name": "tarre",
+            "email": "tarre.islam@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tarre\\BeyondCrudHelpers\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tarre\\BeyondCrudHelpers\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
