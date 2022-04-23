@@ -34,7 +34,7 @@ class ModelTenant implements TenantClassBuilder
 
         });
 
-        $class->addProperty('fillable', $columns->map(fn(Column $column) => $column->getName())->toArray());
+        $class->addProperty('fillable', $columns->map(fn(Column $column) => $column->getName())->values()->toArray());
 
         $class->addProperty('casts', $columns->map(function (Column $column) {
             $phpType = Helper::typeTranslator($column->getType());
